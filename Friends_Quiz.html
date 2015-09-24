@@ -1,5 +1,14 @@
 <html>
+
+<head>
+
+  <title>Friends Quiz</title>
+  <h1>Friends Quiz</h1>
+
+</head>
+
 <form>
+     
      1. What is the name of Pheobe's sister? <br>
   <input type="radio" id="a1" name="q1" value="a" >a. Ariel <br>
   <input type="radio" id="b1" name="q1" value ="b">b. Ursula <br>
@@ -66,37 +75,39 @@
   <input type="radio" id="c11" name="q11" value"c">c. Bats <br>
   <input type="radio" id="d11" name="q11" value"d">d. Mimes <br>
       
-           
 </form>
       
 <button type="button" id="button">Done!</button> 
 <script language ="javascript">
-var answerCounter = 0;
+
 document.getElementById('button').onclick = function() {
-  if(document.getElementById('b1').checked)
-    ++answerCounter;
-   if(document.getElementById('b2').checked)
-    ++answerCounter;
-   if(document.getElementById('a3').checked)
-    ++answerCounter;
-   if(document.getElementById('d4').checked)
-    ++answerCounter;
-   if(document.getElementById('c5').checked)
-    ++answerCounter;
-   if(document.getElementById('c6').checked)
-    ++answerCounter;
-    if(document.getElementById('a7').checked)
-    ++answerCounter;
-    if(document.getElementById('b8').checked)
-    ++answerCounter;
-     if(document.getElementById('d9').checked)
-    ++answerCounter;
-    if(document.getElementById('a10').checked)
-    ++answerCounter;
-    if(document.getElementById('a11').checked)
-    ++answerCounter;
+  
+  var answers = "";
+
+  if(!document.getElementById('b1').checked)
+    answers += "1 ";
+  if(!document.getElementById('b2').checked)
+    answers += "2 ";
+  if(!document.getElementById('a3').checked)
+    answers += "3 ";
+  if(!document.getElementById('d4').checked)
+    answers += "4 ";
+  if(!document.getElementById('c5').checked)
+    answers += "5 ";
+  if(!document.getElementById('c6').checked)
+    answers += "6 ";
+  if(!document.getElementById('a7').checked)
+    answers += "7 ";
+  if(!document.getElementById('b8').checked)
+    answers += "8 ";
+  if(!document.getElementById('d9').checked)
+    answers += "9 ";
+  if(!document.getElementById('a10').checked)
+    answers += "10 ";
+  if(!document.getElementById('a11').checked)
+    answers += "11 ";
     
-    alert("You got " + answerCounter +" right out of 11.");
+    alert("You got number(s) " + answers + "wrong");
 }
     
 </script>
